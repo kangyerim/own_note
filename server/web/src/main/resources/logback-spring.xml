@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="log/console.xml" />
+    <root level="info">
+        <springProfile name="local">
+            <appender-ref ref="ownNote_slf4j"/>
+        </springProfile>
+        <springProfile name="dev">
+        </springProfile>
+        <springProfile name="prod">
+        </springProfile>
+        <springProfile name="test">
+            <appender-ref ref="ownNote_slf4j"/>
+        </springProfile>
+    </root>
+</configuration>
